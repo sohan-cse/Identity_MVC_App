@@ -1,0 +1,58 @@
+﻿# =========================
+# Build output
+# =========================
+bin/
+obj/
+
+# =========================
+# Visual Studio / Rider
+# =========================
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# =========================
+# Logs
+# =========================
+*.log
+
+# =========================
+# OS files
+# =========================
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# =========================
+# User secrets & configs
+# =========================
+secrets.json
+appsettings.Development.json
+appsettings.Production.json
+
+# =========================
+# Database files (IMPORTANT)
+# =========================
+
+# SQL Server LocalDB
+*.mdf
+*.ldf
+
+# SQLite
+*.db
+*.db-shm
+*.db-wal
+
+# MySQL / PostgreSQL dumps
+*.sql
+
+# EF Core temp files
+*.bak
+*.cache
+
+# =========================
+# Publish output
+# =========================
+publish/
