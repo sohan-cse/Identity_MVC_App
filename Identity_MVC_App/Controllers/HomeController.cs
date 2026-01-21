@@ -1,5 +1,6 @@
 using System.Diagnostics;
 using Identity_MVC_App.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Identity_MVC_App.Controllers
@@ -18,6 +19,7 @@ namespace Identity_MVC_App.Controllers
             return View();
         }
 
+        [Authorize]
         public IActionResult Privacy()
         {
             return View();

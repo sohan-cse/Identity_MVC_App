@@ -5,6 +5,12 @@
     @if (signInManager.IsSignedIn(User))
     {
         <li class="nav-item">
+            <a class="nav-link" asp-controller="Admin" asp-action="Index">Admin Manager</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" asp-controller="Student" asp-action="Index">Student Manager</a>
+        </li>
+        <li class="nav-item">
             <a class="nav-link" asp-controller="Login" asp-action="Logout"><i class="bi bi-box-arrow-right mx-2"></i>Logout</a>
         </li>
     }
