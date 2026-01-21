@@ -21,7 +21,7 @@ body {
   margin-bottom: 60px;
 }
 
-.regbody{
+.regbody,.logbody{
     background-color:lightgray;
     border-radius:20px
 }
