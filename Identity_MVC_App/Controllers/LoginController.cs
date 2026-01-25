@@ -1,4 +1,5 @@
-﻿using Identity_MVC_App.Models;
+﻿using Identity_MVC_App.Helper;
+using Identity_MVC_App.Models;
 using Identity_MVC_App.ViewModels;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -39,6 +40,12 @@ namespace Identity_MVC_App.Controllers
 
                 if(result.Succeeded)
                 {
+                    EmailSender emailSender=new EmailSender();
+                    string message = "Dear" + model.Name + "<br/><br/>" +
+                        "Thanks for registering with us.<br/><br/>" +
+                        "<b>Your user Id:" + model.Email+"<br/>"+"Your Password:"+model.Password+"</b><br/><br/>" +"Regards<br/>" +
+                        "<font color='blue' size=10px>Identity MVC App Team</font>";
+                    emailSender.SendMail(model.Email, "Registration Successful", message);
                     return RedirectToAction("Index","Home");
                 }
                 else
