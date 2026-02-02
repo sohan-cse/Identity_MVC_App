@@ -1,9 +1,18 @@
 ﻿@using Microsoft.AspNetCore.Identity
 @inject SignInManager<Users> signInManager
+@inject UserManager<Users> userManager
+@{
+    
+}
 
 <ul class="navbar-nav ms-auto fw-bold">
     @if (signInManager.IsSignedIn(User))
     {
+        var user = userManager.Users.FirstOrDefault(x => x.Email == userManager.GetUserName(User));
+        string name = user.Name;
+        <li class="nav-item">
+            <a class="nav-link" asp-controller="Home" asp-action="Profile"><i class="bi bi-person-circle mx-2"></i>@name</a>
+        </li>
         <li class="nav-item">
             <a class="nav-link" asp-controller="Admin" asp-action="Index">Admin Manager</a>
         </li>
