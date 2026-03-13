@@ -10,14 +10,19 @@
     {
         var user = userManager.Users.FirstOrDefault(x => x.Email == userManager.GetUserName(User));
         string name = user.Name;
+
         <li class="nav-item">
-            <a class="nav-link" asp-controller="Home" asp-action="Profile"><i class="bi bi-person-circle mx-2"></i>@name</a>
+            <a class="nav-link" asp-controller="Login" asp-action="ChangePassword">Change Password</a>
         </li>
+        
         <li class="nav-item">
             <a class="nav-link" asp-controller="Admin" asp-action="Index">Admin Manager</a>
         </li>
         <li class="nav-item">
             <a class="nav-link" asp-controller="Student" asp-action="Index">Student Manager</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" asp-controller="Home" asp-action="Profile"><i class="bi bi-person-circle mx-2"></i>@name</a>
         </li>
         <li class="nav-item">
             <a class="nav-link" asp-controller="Login" asp-action="Logout"><i class="bi bi-box-arrow-right mx-2"></i>Logout</a>

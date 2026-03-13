@@ -17,7 +17,7 @@ namespace Identity_MVC_App.Helper
             smtpClient.Port = 587;
             smtpClient.EnableSsl = true;
             smtpClient.UseDefaultCredentials = false;
-            smtpClient.Credentials = new System.Net.NetworkCredential("sohan.pust.14@gmail.com", "dxtm tzfm vvli iouj"); // Use App Password here
+            smtpClient.Credentials = new System.Net.NetworkCredential("sohan.pust.14@gmail.com", "app password"); // Use App Password here
             smtpClient.DeliveryMethod= SmtpDeliveryMethod.Network;
 
             try
